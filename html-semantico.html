@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Accessibility</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <nav aria-label="Main Navigation">
+        <ul role="menuOptions">
+          <li id="optionOne" role="option">
+            <a href="#" aria-label="Overview page"> Overview </a>
+          </li>
+          <li id="optionTwo" role="option">
+            <a href="#" aria-label="Contacts"> Contacts </a>
+          </li>
+          <li id="optionThree" role="option">
+            <a href="#" aria-label="Favorites"> Favorites </a>
+          </li>
+          <li id="optionFour" role="option">
+            <button
+              id="buttonOptionNew"
+              role="optionBottom"
+              aria-haspopup="true"
+              aria-expanded="false"
+              aria-controls="new-menu"
+            >
+              + NEW
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <!-- Formulario -->
+      <section aria-labelledby="form-section">
+        <form aria-describedby="form-description">
+          <label for="first-name">First name</label>
+          <input
+            type="text"
+            name="first-name"
+            id="fist-name"
+            aria-required="true"
+          />
+          <label for="last-name">Last name</label>
+          <input
+            type="text"
+            name="last-name"
+            id="last-name"
+            aria-required="true"
+          />
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" aria-required="true" />
+
+          <div>
+            <small>Enable like favorite</small>
+            <input
+              type="checkbox"
+              name="enable_favorite"
+              id="enable_favorite"
+            />
+          </div>
+
+          <button type="submit">Save</button>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
